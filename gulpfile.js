@@ -22,7 +22,8 @@ gulp.task('scripts', function(){
   .pipe(plumber())
   .pipe(rename({suffix:'.min'}))
   .pipe(uglify())
-  .pipe(gulp.dest('app/js'));
+  .pipe(gulp.dest('app/js'))
+  .pipe(reload({stream:true}));
 });
 
 // //////////////////////////////////////////////////
@@ -58,7 +59,7 @@ gulp.task('jade', function(){
 // Clear out all files and folders from build folder
 gulp.task('build:cleanfolder', function(cb) {
   del([
-    'build/'
+    'build'
   ], cb);
 });
 
@@ -98,7 +99,7 @@ gulp.task('browser-sync', function(){
 // //////////////////////////////////////////////////
 
 gulp.task('watch', function(){
-  gulp.watch('app/js/**/*.js', ['scripts']);
+  gulp.watch('app/js/*.js', ['scripts']);
   gulp.watch('app/scss/**/*.sass', ['sass']);
   gulp.watch('app/**/*.jade', ['jade']);
 });

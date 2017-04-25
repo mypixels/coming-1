@@ -1,0 +1,57 @@
+nav
+  display: flex
+
+  ul
+    display: flex
+    flex: 1
+
+    a
+      display: flex
+      flex: 1
+      justify-content: center
+      padding: 1em 0
+      color: $nav-links
+      background: $nav-bg
+
+      &:not(:last-of-type)
+        border-right: 2px solid $nav-border
+
+@media screen and (min-width: 900px)
+  nav
+    height: 100%
+    position: relative
+    left: 0
+    top: 0
+
+    ul
+      flex-grow: 0
+      flex-direction: column
+
+      a
+        align-items: center
+        padding: 0 1em
+
+        &:not(:last-of-type)
+          border-right: 0px
+          border-bottom: 2px solid $nav-border
+
+        &:hover
+          background: $content-bg
+
+      #facebook_modal:hover
+        color: $nav-facebook-hover-link
+      #twitter_modal:hover
+        color: $nav-twitter-hover-link
+      #instragram_modal:hover
+        i::before
+          background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)
+          -webkit-background-clip: text
+
+      #linked_in_modal:hover
+        color: $nav-linkedin-hover-link
+      #chat_modal:hover
+        color: $nav-chat-hover-link
+      #email_modal:hover
+        color: $nav-email-hover-link
+      #phone_modal:hover
+        color: $nav-phone-hover-link

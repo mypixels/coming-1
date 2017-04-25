@@ -20,13 +20,19 @@ head
   link(rel='shortcut icon', href='img/favicon.png')
   link(rel='apple-touch-icon', href='apple-touch-icon.png')
 
-  link(rel='stylesheet', href='css/normalize.min.css')
+  link(rel='stylesheet', href='bower_components/font-awesome/css/font-awesome.min.css')
   link(rel='stylesheet', href='css/style.min.css')
+  link(rel='stylesheet', href='css/animate.css')
   //- Add modernizr script(src='js/libs/')
 
 body
-  include jade/_header.jade
+  include jade/_main-nav.jade
+  .site-content
+    include jade/_content.jade
+  //- include jade/_modals.jade
+  include jade/_footer.jade
     
     
-    
-  script(src="app/js/main.min.js")
+  script(src="bower_components/jquery/dist/jquery.min.js")
+  script(src="js/animatedModal.min.js")
+  script(src="js/main.min.js")

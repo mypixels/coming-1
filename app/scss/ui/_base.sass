@@ -1,0 +1,28 @@
+// Basic Styles
+*, *:before, *:after
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+html, body
+  box-sizing: border-box
+  height: 100%
+
+body
+  display: flex
+  flex-direction: column
+  -webkit-font-smoothing: antialised
+  -webkit-text-size-adjust: 100%
+
+  .site-content
+    display: flex
+    flex: 1
+    align-items: center
+    justify-content: center
+
+    @media screen and (min-width: 900px)
+      position: relative
+      top: -50%
+
+  li
+    list-style-type: none

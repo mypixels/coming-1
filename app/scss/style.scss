@@ -1,1 +1,25 @@
-@import 'base';
+// *************************
+// IMPORTS
+// *************************
+// @import 'ui/reset';
+
+// *************************
+// BASE STYLES
+// *************************
+@import 'ui/_base';
+@import 'ui/typography';
+
+// ****************************
+// UI ELEMENTS
+// ****************************
+@import 'ui/_variables';
+@import 'ui/_layout';
+@import 'ui/_icons';
+
+// ****************************
+// SECTION ELEMENTS
+// ****************************
+@import 'sections/_main-nav';
+@import 'sections/_content';
+@import 'sections/_modals';
+@import 'sections/_footer';
